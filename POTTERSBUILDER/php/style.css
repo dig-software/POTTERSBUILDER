@@ -1,0 +1,36 @@
+/* Simple styles for POTTERSBUILDER PHP frontend */
+body { font-family: Arial, Helvetica, sans-serif; background:#f6f7fb; color:#111; }
+/* Use project background image via asset proxy */
+body.with-bg::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background-image: url('assets/asset.php?name=bg');
+	background-size: cover;
+	background-position: center center;
+	opacity: 0.14;
+}
+.container { max-width:900px; margin:32px auto; padding:24px; background:white; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin-top:0 }
+label { display:block; margin-top:14px; font-weight:600 }
+textarea { width:100%; padding:10px; font-size:14px; }
+input[type="number"]{ padding:6px 8px }
+.actions { margin-top:16px }
+button { background:#0066cc; color:white; border:0; padding:10px 16px; border-radius:6px; cursor:pointer }
+.checkbox { margin-top:12px }
+.lead { color:#444 }
+.error { color:#8a1f1f; background:#ffecec; padding:10px; border-radius:6px }
+.answer { background:#f3f9f3; padding:12px; border-left:4px solid #2e8b57 }
+.contexts { margin-top:8px }
+.ctx-source { font-weight:700; margin-bottom:6px }
+.ctx-text { margin-bottom:14px; color:#222 }
+.note { color:#555; background:#fff8e1; padding:8px; border-radius:4px }
+footer { margin-top:20px; color:#666; font-size:13px }
+
+/* Auth forms */
+input[type="text"], input[type="password"], input[type="number"], textarea {
+	width:100%; padding:8px; box-sizing:border-box; margin-top:6px; border:1px solid #ddd; border-radius:6px
+}
+.auth-links { text-align:right; font-size:14px }
+.container a { color:#0066cc }
